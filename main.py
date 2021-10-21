@@ -1,10 +1,9 @@
 from telethon import TelegramClient, events,functions
-from telethon.tl.types import InputMessagesFilterMusic
+from telethon.tl.types import InputMessagesFilterMusic,Document
 import time
-from telethon.tl.types import Document
 import os
-api_id = 8828647
-api_hash = "61b3bd6272e586d5bd214ffb822321f4"
+api_id = 1234 # here is the api id
+api_hash =  "0123456789abcdef0123456789abcdef"   # here is the hash
 
 
 bot = "FusionDL_Bot"
@@ -12,7 +11,7 @@ bot = "FusionDL_Bot"
 
 client = TelegramClient("anon", api_id, api_hash)
 
-link = "https://deezer.com/track/1398346782"
+link = ""           # a valid deezer music link 
 
 path = "dls/"
 async def send():
