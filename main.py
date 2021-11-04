@@ -47,18 +47,14 @@ async def dl():
 def change_quality(quality):
     async def ch_qlty(quality):
         await client.send_message(bot, "/settings")
-        message_raw = []
-        async for i in client.iter_messages(bot, reverse=True):
-            message_raw = i
-
-        print(message_raw)
-
-    ##        await message.click(0)
-    ##        async for i in client.iter_messages(bot,reverse=True,from_user=bot):
-    ##            message=i
-    ##            break
-    ##        print(message)
-    ##        await message.click(quality)
+        time.sleep(1)
+        async for i in client.iter_messages(bot, reverse=True, from_user=bot):
+            message = i
+        await message.click(0)
+        time.sleep(1)
+        async for i in client.iter_messages(bot, reverse=True, from_user=bot):
+            message = i
+        await message.click(quality)
 
     with client:
         client.loop.run_until_complete(ch_qlty(quality))
@@ -68,7 +64,6 @@ def runner():
     with client:
         client.loop.run_until_complete(send())
         client.loop.run_until_complete(dl())
-
 
 if __name__ == "__main__":
     runner()
