@@ -3,12 +3,12 @@ import time
 from telethon import TelegramClient
 from telethon.tl.types import InputMessagesFilterMusic
 
-api_id = 8828647
-api_hash = "61b3bd6272e586d5bd214ffb822321f4"
+api_id = 1234 #Here Goes the API ID
+api_hash = "asdfghjklxcvbnm124578"  #API HASH
 
 client = TelegramClient("anon", api_id, api_hash)
 
-link = "https://deezer.com/track/1398346782"
+link = "https://deezer.com/track/1234567"   #A valid deezer or spotify link
 path = "dls/"
 bot = "FusionDL_Bot"
 
